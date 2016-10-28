@@ -2,6 +2,8 @@
 State Diagram
 ##ส่งการบ้าน
 
+### State Diagram
+
 ภาพที่ 1  การเปิดคอมพิวเตอร์
 
  ```
@@ -22,4 +24,4 @@ Ready --> [*]
 @enduml
  ```
  
- ![]()
+ ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/1.png)
