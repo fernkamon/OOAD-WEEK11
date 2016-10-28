@@ -25,3 +25,35 @@ Ready --> [*]
  ```
  
  ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/1.png)
+
+
+ ภาพที่2 เครื่องคิดเลข
+ 
+  ```
+ @startuml
+title Calculator
+
+[*] --> OFF
+OFF : Calculator closed
+OFF -r-> ON : Press on
+ON : turn on Calculator
+
+ON -r-> Number1 : Press Number set 1
+Number1 : Number 0 - 9
+Number1 -d-> OP : Press Operator
+OP : Operators is + - * /
+
+OP -l-> Number2 : Press Number set 2
+Number2 : Number 0 - 9
+
+Number2 -l-> resalt : Press resalt
+resalt : Opertor =
+
+resalt -d-> Clear : Press Clear
+Clear : clear monitor with space
+Clear --> Number1 : reset to operands
+Clear -r-> [*]
+@enduml
+ ```
+ 
+ ![]()
