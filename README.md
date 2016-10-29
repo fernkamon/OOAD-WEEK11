@@ -128,3 +128,22 @@ printer --> [*]
 
 ### Activity Diagram
  
+ภาพที่ 1 การกดสวิตซ์แล้วไฟติด
+
+ ```
+@startuml
+title Press the switch and light
+(*) --> "Input operation"
+
+if "If the press switch" then
+  -->[true] "LED stick"
+    -r-> [Ending \nprocess](*)
+else
+  ->[false] "LED OFF"
+  -->[Ending process] (*)
+endif
+
+@enduml
+ ```
+ 
+ ![]()
