@@ -194,7 +194,7 @@ endif
  
  ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/Activity3.png)
  
- ภาพที่ 4 ระบบคลังสินค้า
+ ภาพที่ 4 ระบบร้านกาแฟ
  
  ```
  @startuml
@@ -211,4 +211,23 @@ endif
 @enduml
  ```
  
- ![]()
+ ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/Activity4.png)
+ 
+ ภาพที่ 5 ระบบเช็คสินค้า
+ 
+  ```
+  @startuml
+
+(*) -r->  "recive"
+ "recive" --> "Check product"
+if "Count the number \nof products available" then
+  -r->[count complete] "keep storehouse"
+else
+  -l->[not complete] "Check product"
+"keep storehouse"--> (*)
+endif
+
+@enduml
+   ```
+
+![]()
