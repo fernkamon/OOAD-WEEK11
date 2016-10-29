@@ -192,4 +192,23 @@ endif
 @enduml
  ```
  
+ ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/Activity3.png)
+ 
+ ภาพที่ 4 ระบบคลังสินค้า
+ 
+ ```
+ @startuml
+
+(*) -r->  "make Coffee"
+ "make Coffee" --> "Check Coffee"
+if "If Check Coffee complete" then
+  -r->[true] "Send order"
+else
+  -l->[false] "make Coffee"
+"Send order"--> (*)
+endif
+
+@enduml
+ ```
+ 
  ![]()
