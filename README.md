@@ -104,3 +104,25 @@ telephone -l-> [*]
  
  ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/4.1.png)
  
+ ภาพที่ 5 การพิมพ์งาน
+ 
+ ```
+ @startuml
+title  use Microsoft office Word
+[*] -r-> Program : into program
+Program : program Word
+Program -r-> FirstPage : into first page
+FirstPage : Page for printing
+FirstPage -r-> framework : Opening Page Setup
+framework : Page Setup
+framework --> FirstPage : Back to work
+FirstPage --> insert : To add photos
+insert : photos graph etc.
+FirstPage --> printer : finish
+printer --> printer :  Make sure the print.
+printer --> [*]
+@enduml
+ ```
+
+![]()
+ 
