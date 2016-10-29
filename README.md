@@ -80,25 +80,27 @@ Transaction -l-> [*]
 ภาพที่ 4 ตู้เติมเงินออนไลน์
 
  ``` 
- @startuml
+@startuml
 title  Online Top Up
 [*] -r-> keypad : wait press keypad
 keypad : keypad 0 -9
-keypad -r-> AddedValue : press keypad
+keypad --> AddedValue : press keypad
 AddedValue : Press the button 10-digit dialing
 AddedValue --> keypad : Unexpired
-AddedValue -d-> topUp 
+AddedValue -r-> topUp 
 topUp : Deposit money As needed
-topUp -l-> Coin : insert Coin
+topUp -r-> Coin : insert Coin
 Coin : Coin stated
 Coin -d-> System : calculations
-System -r-> network :Send data 
-network -r-> telephone : Prepaid service users
+System -l-> network :Send data 
+network -d-> telephone : Prepaid service users
 network : Mobile networks of users
 telephone : telephone User
-telephone --> telephone : Check money
+telephone -d-> telephone : Check money
+telephone -l-> [*]
 @enduml
+
  ```
  
- ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/4.png)
+ ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/4.1.png)
  
