@@ -57,3 +57,21 @@ Clear -r-> [*]
  ```
  
  ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/2.png)
+ 
+ ภาพที่3 การกดปุ่ม ATM
+ 
+  ```
+  @startuml
+title  ATM
+[*] -r-> keypad : wait press keypad
+keypad : keypad 0 -9
+keypad -d-> AddedValue : press keypad
+AddedValue : Press the button to \ncomplete the set.
+AddedValue -d-> keypad : Unexpired
+AddedValue -l-> Transaction 
+Transaction : Deposit, withdraw and transfer money
+Transaction -l-> [*]
+@enduml
+
+   ```
+ ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/3.png)
