@@ -146,4 +146,29 @@ endif
 @enduml
  ```
  
+ ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/Activity1.png)
+
+ภาพที่ 2 การเปิดหลักสูตรการเรียน
+
+ ```
+@startuml
+title registration
+(*) -r->  [registration create\ncurriculum]curriculum
+
+curriculum -d-> [Choose a course \nthat will teach]Subject
+curriculum --> [Requiring teachers \nin each subject]Teacher
+if "If All subjects \nthen, define" then
+  -r->[true \n create] "Student Guide"
+  -->[send]"book center"
+"Student Guide" --> [send] "student"  
+else
+  -l->[false] Teacher
+
+endif
+"book center"  --> "Open registration"
+"student"  --> "Open registration"
+  --> (*)
+@enduml
+ ```
+ 
  ![]()
