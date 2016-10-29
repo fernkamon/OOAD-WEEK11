@@ -172,3 +172,24 @@ endif
  ```
  
  ![](https://github.com/fernkamon/OOAD-WEEK11/blob/master/Activity2.png)
+ 
+ ภาพที่ 3 การสมัครสมาชิก
+
+```
+ @startuml
+title Subscriptions
+(*) -r->  [data entry]"Candidate information"
+
+if "If Enter your information" then
+  -r->[true] "Register"
+  -d->[send]"e-mail"
+"e-mail" -l-> [send] "number member"  
+else
+  -l->[false] "Candidate information"
+"number member"    --> (*)
+endif
+
+@enduml
+ ```
+ 
+ ![]()
